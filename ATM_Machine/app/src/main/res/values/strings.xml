@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ATM_Machine</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="enterTheNecessaryAmountOfMoney">  Введите необходимую сумму....</string>
+    <string name="rating_1">Кол-во купюр наминалом 1:</string>
+    <string name="rating_5">Кол-во купюр наминалом 5:</string>
+    <string name="rating_10">Кол-во купюр наминалом 10:</string>
+    <string name="rating_20">Кол-во купюр наминалом 20:</string>
+    <string name="rating_50">Кол-во купюр наминалом 50:</string>
+    <string name="rating_100">Кол-во купюр наминалом 100:</string>
+    <string name="rating_200">Кол-во купюр наминалом 200:</string>
+    <string name="title_activity_add_cash_to_atmmachine">AddCashToATMMachine</string>
+    <string name="kolvo">Введите кол-во купюр...</string>
+    <string name="nominal">Введите номинал купюры...</string>
+</resources>

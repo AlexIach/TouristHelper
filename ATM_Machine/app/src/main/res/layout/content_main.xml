@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.alexiachimov.atm_machine.main.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="@string/enterTheNecessaryAmountOfMoney"
+        android:ems="10"
+        android:id="@+id/editTextSumOfMoney"
+        android:drawableLeft="@drawable/ic_square_inc_cash_grey600_24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="210dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выдать наличные"
+        android:background="@drawable/button_states"
+        android:textColor="@color/colorWhite"
+        android:id="@+id/buttonGetMoney"
+        android:onClick="getMoneyFromATM"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/editTextSumOfMoney"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rating_200"
+        android:id="@+id/textViewRating200"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rating_100"
+        android:id="@+id/textViewRating100"
+        android:layout_below="@+id/textViewRating200"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rating_50"
+        android:id="@+id/textViewRating50"
+        android:layout_below="@+id/textViewRating100"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rating_20"
+        android:id="@+id/textViewRating20"
+        android:layout_below="@+id/textViewRating50"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rating_10"
+        android:id="@+id/textViewRating10"
+        android:layout_below="@+id/textViewRating20"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rating_5"
+        android:id="@+id/textViewRating5"
+        android:layout_below="@+id/textViewRating10"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rating_1"
+        android:id="@+id/textViewRating1"
+        android:layout_below="@+id/textViewRating5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Кол-во денег в банкомате: "
+        android:id="@+id/textViewMoneInATM"
+        android:layout_below="@+id/textViewRating1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Результат:"
+        android:id="@+id/textViewResult"
+        android:layout_below="@+id/buttonGetMoney"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Обновить купюры"
+        android:id="@+id/button"
+        android:background="@drawable/button_states"
+        android:onClick="onRefresh"
+        android:layout_below="@+id/textViewMoneInATM"
+        android:layout_alignRight="@+id/buttonGetMoney"
+        android:layout_alignEnd="@+id/buttonGetMoney" />
+</RelativeLayout>
