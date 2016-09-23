@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.main.Colorie_Diary_Activity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/current_date"
+        android:id="@+id/tvCurrentDateDiary"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"/>
+
+    <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:drawableLeft="@drawable/ic_food_grey600_24dp"
+    android:drawableTint="@color/colorPrimary"
+    android:hint="@string/priduct_name"
+    android:textColorHint="@color/colorPrimary"
+    android:paddingTop="60dp"
+    android:id="@+id/editTextCurrentProductsName" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_scale_balance_grey600_24dp"
+        android:drawableTint="@color/colorPrimary"
+        android:hint="@string/products_weight"
+        android:textColorHint="@color/colorPrimary"
+        android:paddingTop="115dp"
+        android:inputType="number"
+        android:id="@+id/etCurrentProductsWeight"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_diary"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorPrimary"
+        android:textStyle="bold"
+        android:onClick="AddEatenProductToDB"
+        android:layout_below="@+id/etCurrentProductsWeight"/>
+
+
+
+
+    <SlidingDrawer
+        android:id="@+id/drawer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:content="@+id/content"
+        android:handle="@+id/handle"
+        android:orientation="vertical"
+        android:overScrollMode="always"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        >
+
+        <ImageView
+            android:id="@+id/handle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:src="@drawable/ic_arrow_up_drop_circle_grey600_24dp" />
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="200dip"
+            android:background="@color/colorWhite"
+            android:orientation="vertical" >
+
+
+            <TextView
+                android:id="@+id/tvDayResults"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:textStyle="bold"
+                android:text="@string/day_results" />
+            <Button
+                android:id="@+id/buttonrefresh"
+                android:background="@drawable/ic_refresh_grey600_24dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+
+                android:onClick="refresh"
+                android:layout_below="@+id/tvDayResults"
+                />
+
+
+            <ListView
+                android:layout_below="@+id/buttonrefresh"
+                android:id="@+id/listViewEatenFood"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </ListView>
+
+
+
+
+        </RelativeLayout>
+    </SlidingDrawer>
+
+
+
+
+</RelativeLayout>

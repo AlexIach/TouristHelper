@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/diary"
+            android:icon="@drawable/book_open_variant1"
+            android:title="@string/diary" />
+        <item
+            android:id="@+id/list_products"
+            android:icon="@drawable/bio1"
+            android:title="@string/list_products" />
+        <item
+            android:id="@+id/calculations"
+            android:icon="@drawable/calculator"
+            android:title="@string/calculations" />
+        <item
+            android:id="@+id/calendar"
+            android:icon="@drawable/calendar1"
+            android:title="@string/calendar" />
+        <item
+            android:id="@+id/helpful_information"
+            android:icon="@drawable/information"
+            android:title="@string/helpful_information" />
+    </group>
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/settings"
+                android:icon="@drawable/settings"
+                android:title="@string/settings" />
+        </menu>
+    </item>
+
+</menu>

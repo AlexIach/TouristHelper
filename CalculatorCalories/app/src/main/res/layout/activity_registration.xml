@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.main.RegistrationActivity"
+    android:fillViewport="true">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:background="@color/colorGtey"
+            android:src="@drawable/my_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="110dp"
+            android:id="@+id/myPhotoId"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <RadioGroup
+            android:id="@+id/radioSex"
+            android:layout_below="@+id/myPhotoId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:checked="false" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:checked="false" />
+
+        </RadioGroup>
+
+        <EditText
+            android:layout_below="@+id/radioSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextUserName"
+            android:singleLine="true"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_account_settings_grey600_24dp"
+            android:hint="@string/your_name"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <EditText
+            android:layout_below="@+id/editTextUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextUserPassword"
+            android:singleLine="true"
+            android:drawableTint="@color/colorPrimary"
+            android:drawableLeft="@drawable/ic_lock_grey600_24dp"
+            android:hint="@string/your_password"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextUserAge"
+            android:drawableLeft="@drawable/ic_image_filter_vintage_grey600_24dp"
+            android:drawableTint="@color/colorPrimary"
+            android:hint="@string/age"
+            android:textColorHint="@color/colorPrimary"
+            android:inputType="number"
+            android:layout_below="@+id/editTextUserPassword"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextUserWeight"
+            android:layout_below="@+id/editTextUserAge"
+            android:drawableLeft="@drawable/ic_human_child_grey600_24dp"
+            android:drawableTint="@color/colorPrimary"
+            android:hint="@string/weight"
+            android:textColorHint="@color/colorPrimary"
+            android:inputType="number"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextUserHeight"
+            android:layout_below="@+id/editTextUserWeight"
+            android:drawableLeft="@drawable/ic_human_greeting_grey600_24dp"
+            android:drawableTint="@color/colorPrimary"
+            android:hint="@string/height"
+            android:textColorHint="@color/colorPrimary"
+            android:inputType="number"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_goal"
+            android:drawableTint="@color/colorPrimary"
+            android:textSize="20dp"
+            android:id="@+id/textView2"
+            android:drawableLeft="@drawable/ic_google_glass_grey600_24dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/editTextUserHeight"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:layout_below="@+id/editTextUserHeight"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2"
+            android:paddingLeft="12dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_style"
+            android:drawableTint="@color/colorPrimary"
+            android:textSize="20dp"
+            android:id="@+id/tvLifeStyle"
+            android:drawableLeft="@drawable/ic_bike_grey600_24dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerLifeStyle"
+            android:layout_below="@+id/spinner"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2"
+            android:paddingLeft="12dp"
+            android:paddingTop="10dp"
+
+            />
+
+
+
+
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/fabRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/ic_plus"
+            fab:fab_colorNormal="@color/colorPrimary"
+            fab:fab_colorPressed="@color/colorPrimaryDark"
+            android:paddingLeft="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>
